@@ -57,7 +57,7 @@
 // |     |  ;  |  1  |  2  |  3  |  x  |   |     |  *  |  -  |  +  |  /  |     |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans   &trans      &kp N7  &kp N8  &kp N9  &trans      &trans      &trans      &kp C_BRI_UP    &kp C_BRI_DN    &kp EQUAL   &trans
+   &trans   &trans      &kp N7  &kp N8  &kp N9  &trans      &trans      &trans      &kp C_BRI_DN    &kp C_BRI_UP    &kp EQUAL   &trans
    &trans   &trans      &kp N4  &kp N5  &kp N6  &kp N0      &kp LEFT    &kp DOWN    &kp UP          &kp RIGHT       &trans      &trans
    &trans   &kp SEMI    &kp N1  &kp N2  &kp N3  &kp X       &trans      &kp ASTRK   &kp MINUS       &kp PLUS        &kp FSLH    &trans
                                 &trans  &trans  &trans      &trans      &trans      &trans
