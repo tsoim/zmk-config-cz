@@ -43,3 +43,17 @@ To locate your firmware files...
     - If you changed [the conf file](/config/corneish_zen.conf) you should flash both sides their respective files.
 
 Your keyboard is now ready to use.
+
+---
+
+# Customization
+
+## Repo Setup
+
+* this was set up as a private fork following [these instructions](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274)
+* to update:
+
+```
+git fetch upstream
+git rebase upstream/master
+```
