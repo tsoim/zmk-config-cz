@@ -30,7 +30,7 @@
     &kp TAB     &kp FSLH    &kp COMMA   &kp DOT     &kp P   &kp Y       &kp F   &kp G   &kp L   &kp R   &kp Z   &kp BSLH
     &kp ESC     &kp A       &kp O       &kp E       &kp I   &kp U       &kp D   &kp H   &kp T   &kp N   &kp S   &kp RET
     &kp LSHFT   &kp SEMI    &kp Q       &kp J       &kp K   &kp X       &kp B   &kp M   &kp W   &kp V   &kp C   &kp RSHFT
-                                        &kp LGUI    &mo _SYMBOL   &kp BSPC    &kp RET &lt _NAVNUM SPACE   &kp RALT
+                                &kp LGUI    &mo _SYMBOL   &kp BSPC      &kp RCTL    &lt _NAVNUM SPACE   &kp RALT
                         >;
                 };
 
