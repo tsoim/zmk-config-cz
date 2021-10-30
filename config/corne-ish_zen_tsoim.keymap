@@ -16,6 +16,18 @@
 #define _FUNCTN 3
 
 / {
+        behaviors {
+            mosl: momentary_sticky_holdtap {
+                compatible = "zmk,behavior-hold-tap";
+                label = "MOSLHT";
+                #binding-cells = <2>;
+                tapping-term-ms = <150>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&mo>, <&sl>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -30,7 +42,7 @@
     &kp TAB     &kp FSLH    &kp COMMA   &kp DOT     &kp P   &kp Y       &kp F   &kp G   &kp L   &kp R   &kp Z   &kp BSLH
     &kp ESC     &kp A       &kp O       &kp E       &kp I   &kp U       &kp D   &kp H   &kp T   &kp N   &kp S   &kp RET
     &kp LSHFT   &kp SEMI    &kp Q       &kp J       &kp K   &kp X       &kp B   &kp M   &kp W   &kp V   &kp C   &kp RSHFT
-                                &kp LGUI    &mo _SYMBOL   &kp BSPC      &kp RCTL    &lt _NAVNUM SPACE   &kp RALT
+                                &kp LGUI    &mosl _SYMBOL _FUNCTN  &kp BSPC      &kp RCTL    &lt _NAVNUM SPACE   &kp RALT
                         >;
                 };
 
