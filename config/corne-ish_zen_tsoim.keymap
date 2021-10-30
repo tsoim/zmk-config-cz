@@ -51,12 +51,12 @@
 // -----------------------------------------------------------------------------------------
 // |     |  ?  |  &  |  *  |  <  |  >  |   |  ~  |  _  |  [  |  ]  |  =  |  |  |
 // |     | --- |  $  |  %  |  ^  |  '  |   |  "  |  {  |  (  |  )  |  }  |     |
-// |     | --- |  !  |  @  |  #  |  `  |   |  :  |  *  |  -  |  +  |  /  | TO0 |
+// |     | --- |  !  |  @  |  #  |  `  |   |  :  |  *  |  -  |  +  |  /  | --- |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
    &trans   &kp QMARK   &kp AMPS    &kp ASTRK   &kp LT      &kp GT      &kp TILDE   &kp UNDER   &kp LBKT    &kp RBKT    &kp EQUAL   &trans
    &trans   &none       &kp DLLR    &kp PRCNT   &kp CARET   &kp SQT     &kp DQT     &kp LBRC    &kp LPAR    &kp RPAR    &kp RBRC    &trans
-   &trans   &none       &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp COLON   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &to _DVORAK
+   &trans   &none       &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp COLON   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &none
                                     &trans      &trans      &trans      &trans      &trans      &trans
                         >;
                 };
@@ -66,12 +66,12 @@
 // -----------------------------------------------------------------------------------------
 // |     | --- |  7  |  8  |  9  | VLM |   | VLU | VLD | BRD | BRU |  =  | --- |
 // |     | --- |  4  |  5  |  6  |  0  |   | LFT | DWN |  UP | RGT | --- |     |
-// |     |  ;  |  1  |  2  |  3  |  x  |   | --- |  *  |  -  |  +  |  /  | TO0 |
+// |     |  ;  |  1  |  2  |  3  |  x  |   | --- |  *  |  -  |  +  |  /  | --- |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
    &trans   &none       &kp N7  &kp N8  &kp N9  &kp C_MUTE  &kp C_VOL_UP    &kp C_VOL_DN    &kp C_BRI_DN    &kp C_BRI_UP    &kp EQUAL   &none
    &trans   &none       &kp N4  &kp N5  &kp N6  &kp N0      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none       &trans
-   &trans   &kp SEMI    &kp N1  &kp N2  &kp N3  &kp X       &none           &kp ASTRK       &kp MINUS       &kp PLUS        &kp FSLH    &to _DVORAK
+   &trans   &kp SEMI    &kp N1  &kp N2  &kp N3  &kp X       &none           &kp ASTRK       &kp MINUS       &kp PLUS        &kp FSLH    &none
                                 &trans  &trans  &trans      &trans          &trans          &trans
                         >;
                 };
