@@ -11,8 +11,8 @@
 
 /* layers: higher number means higher precedence */
 #define _DVORAK 0
-#define _SYMBOL 1
-#define _NAVNUM 2
+#define _NAVNUM 1
+#define _SYMBOL 2
 #define _FUNCTN 3
 
 / {
@@ -46,21 +46,6 @@
                         >;
                 };
 
-                symbol_layer {
-                        label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// |     | --- |  &  |  *  |  <  |  >  |   |  ~  |  _  |  [  |  ]  | --- | --- |
-// |     | --- |  $  |  %  |  ^  |  '  |   |  "  |  {  |  (  |  )  |  }  |     |
-// |     | --- |  !  |  @  |  #  |  `  |   |  =  |  *  |  -  |  +  |  /  | TO3 |
-//                   |     |     |     |   |     |     |     |
-                        bindings = <
-   &trans   &none   &kp AMPS    &kp ASTRK   &kp LT      &kp GT      &kp TILDE   &kp UNDER   &kp LBKT    &kp RBKT    &none       &none
-   &trans   &none   &kp DLLR    &kp PRCNT   &kp CARET   &kp SQT     &kp DQT     &kp LBRC    &kp LPAR    &kp RPAR    &kp RBRC    &trans
-   &trans   &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &to _FUNCTN
-                                &trans      &trans      &trans      &trans      &trans      &trans
-                        >;
-                };
-
                 navnum_layer {
                         label = "NAVNUM";
 // -----------------------------------------------------------------------------------------
@@ -76,13 +61,28 @@
                         >;
                 };
 
+                symbol_layer {
+                        label = "SYMBOL";
+// -----------------------------------------------------------------------------------------
+// |     | --- |  &  |  *  |  <  |  >  |   |  ~  |  _  |  [  |  ]  | --- | --- |
+// |     | --- |  $  |  %  |  ^  |  '  |   |  "  |  {  |  (  |  )  |  }  |     |
+// |     | --- |  !  |  @  |  #  |  `  |   |  =  |  *  |  -  |  +  |  /  | TO3 |
+//                   |     |     |     |   |     |     |     |
+                        bindings = <
+   &trans   &none   &kp AMPS    &kp ASTRK   &kp LT      &kp GT      &kp TILDE   &kp UNDER   &kp LBKT    &kp RBKT    &none       &none
+   &trans   &none   &kp DLLR    &kp PRCNT   &kp CARET   &kp SQT     &kp DQT     &kp LBRC    &kp LPAR    &kp RPAR    &kp RBRC    &trans
+   &trans   &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &to _FUNCTN
+                                &trans      &trans      &trans      &trans      &trans      &trans
+                        >;
+                };
+
                 functn_layer {
                         label = "FUNCTN";
 // -----------------------------------------------------------------------------------------
 // |     | --- | ctl<| ctl^| ctl>| VLM |   | BTP | F7  | F8  | F9  | F10 | --- |
 // |     | cmdz| cmdx| cmdc| cmdv|cmdv*|   | BTN | F4  | F5  | F6  | F11 |     |
 // | CLK |cmds4| cmdb| cmdi| cmdu|cmds5|   | BTC | F1  | F2  | F3  | F12 | --- |
-//                   |     |     |     |   | TO0 | TO2 | TO1 |
+//                   |     |     |     |   | TO0 | TO1 | TO2 |
                         bindings = <
    &trans   &none           &kp LC(LEFT)    &kp LC(UP)  &kp LC(RIGHT)   &kp C_MUTE          &bt BT_PRV  &kp F7  &kp F8  &kp F9  &kp F10     &none
    &trans   &kp LG(Z)       &kp LG(X)       &kp LG(C)   &kp LG(V)       &kp LG(LA(LS(V)))   &bt BT_NXT  &kp F4  &kp F5  &kp F6  &kp F11     &trans
