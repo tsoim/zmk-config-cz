@@ -79,14 +79,14 @@
                 functn_layer {
                         label = "FUNCTN";
 // -----------------------------------------------------------------------------------------
-// |     | --- | ctl<| ctl^| ctl>| VLM |   | --- | F7  | F8  | F9  | F10 | --- |
-// |     | cmdz| cmdx| cmdc| cmdv|cmdv*|   | --- | F4  | F5  | F6  | F11 |     |
-// | CLK | --- | cmdb| cmdi| cmdu| --- |   | --- | F1  | F2  | F3  | F12 | --- |
+// |     | --- | ctl<| ctl^| ctl>| VLM |   | BTP | F7  | F8  | F9  | F10 | --- |
+// |     | cmdz| cmdx| cmdc| cmdv|cmdv*|   | BTN | F4  | F5  | F6  | F11 |     |
+// | CLK | --- | cmdb| cmdi| cmdu| --- |   | BTC | F1  | F2  | F3  | F12 | --- |
 //                   |     |     |     |   | TO0 | TO2 | TO1 |
                         bindings = <
-   &trans   &none       &kp LC(LEFT)    &kp LC(UP)  &kp LC(RIGHT)   &kp C_MUTE          &none   &kp F7  &kp F8  &kp F9  &kp F10     &none
-   &trans   &kp LG(Z)   &kp LG(X)       &kp LG(C)   &kp LG(V)       &kp LG(LA(LS(V)))   &none   &kp F4  &kp F5  &kp F6  &kp F11     &trans
-   &kp CAPS &none       &kp LG(B)       &kp LG(I)   &kp LG(U)       &none               &none   &kp F1  &kp F2  &kp F3  &kp F12     &none
+   &trans   &none       &kp LC(LEFT)    &kp LC(UP)  &kp LC(RIGHT)   &kp C_MUTE          &bt BT_PRV  &kp F7  &kp F8  &kp F9  &kp F10     &none
+   &trans   &kp LG(Z)   &kp LG(X)       &kp LG(C)   &kp LG(V)       &kp LG(LA(LS(V)))   &bt BT_NXT  &kp F4  &kp F5  &kp F6  &kp F11     &trans
+   &kp CAPS &none       &kp LG(B)       &kp LG(I)   &kp LG(U)       &none               &bt BT_CLR  &kp F1  &kp F2  &kp F3  &kp F12     &none
                                         &trans      &trans          &trans              &to _DVORAK &to _NAVNUM &to _SYMBOL
                         >;
                 };
