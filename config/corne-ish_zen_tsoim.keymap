@@ -51,12 +51,12 @@
 // -----------------------------------------------------------------------------------------
 // |     | --- |  &  |  *  |  <  |  >  |   |  ~  |  _  |  [  |  ]  | --- | --- |
 // |     | --- |  $  |  %  |  ^  |  '  |   |  "  |  {  |  (  |  )  |  }  |     |
-// |     | --- |  !  |  @  |  #  |  `  |   |  =  |  *  |  -  |  +  |  /  | --- |
+// |     | --- |  !  |  @  |  #  |  `  |   |  =  |  *  |  -  |  +  |  /  | TO3 |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
    &trans   &none   &kp AMPS    &kp ASTRK   &kp LT      &kp GT      &kp TILDE   &kp UNDER   &kp LBKT    &kp RBKT    &none       &none
    &trans   &none   &kp DLLR    &kp PRCNT   &kp CARET   &kp SQT     &kp DQT     &kp LBRC    &kp LPAR    &kp RPAR    &kp RBRC    &trans
-   &trans   &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &none
+   &trans   &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &to _FUNCTN
                                 &trans      &trans      &trans      &trans      &trans      &trans
                         >;
                 };
