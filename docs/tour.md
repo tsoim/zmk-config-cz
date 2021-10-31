@@ -4,11 +4,14 @@
 
 ![crkbz-main](tsoim-crkbz-20211030.png)
 
-### features
+### highlights
 
-* 4 main layers - base, navigation/numbers, symbols, and functions
-* navigation/numbers and symbols layers are reachable by holding down thumb keys, with the "core" functionality for each layer on the opposite hand
-* functions/shortcuts layer should be used with one-shot tap on left thumb key
+* [Corne-ish Zen keyboard](https://github.com/LOWPROKB/zmk-config-Corne-ish-Zen) with ZMK firmware
+* 4 layers - base, navigation/numbers, symbols, and functions
+* base layer is a customized version of dvorak that suits my fingers better
+* navigation/numbers and symbols layers are reachable by holding down thumb keys,
+    with the "core" functionality for each layer on the opposite hand
+* functions/shortcuts layer to be used with one-shot tap on left thumb key
 
 ---
 
@@ -115,6 +118,6 @@ tldr; access via one-shot tap on left thumb key for shortcuts and function keys
 
 ---
 
-## resources
+## notes
 
 * [keyboard layout editor](http://www.keyboard-layout-editor.com/#/gists/052b74409d9075edf47ff1b15d0820e1)
