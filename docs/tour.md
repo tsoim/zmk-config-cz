@@ -85,8 +85,7 @@ tldr; access via one-shot tap on left thumb key for shortcuts and function keys
 
 ### shortcuts
 
-* these shortcuts are just hard to reach with how the layers are set up,
-    some could probably be replaced with sticky keys with mods but that requires more learning
+* the shortcuts were designed to be accessible with left hand only while mousing
 * to make sure symbols layers take precedence over function keys when typing quickly
     (mainly `-` for command line flags), the `hold-preferred` flavor was selected for `behavior-hold-tap`
 
