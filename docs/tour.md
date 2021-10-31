@@ -113,3 +113,9 @@ tldr; access via one-shot tap on left thumb key for shortcuts and function keys
 
 * at some point an internet stranger said that the layout should adapt to the person, not vise versa
 * so as I tested new layouts, if I kept mistyping something, I just altered the layout to what my fingers were actually pressing
+
+---
+
+## resources
+
+* [keyboard layout editor](http://www.keyboard-layout-editor.com/#/gists/052b74409d9075edf47ff1b15d0820e1)
