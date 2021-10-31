@@ -7,13 +7,8 @@
 ### features
 
 * 4 main layers - base, navigation/numbers, symbols, and functions
-* navnum and symbol layers are reachable by holding down thumb keys
-* function layer is to be triggered via one-shot tap on left thumb key
-
-### some thoughts
-
-* at some point I came across an internet stranger saying that the layout should adapt to you, not vise versa
-* so as I tested new layouts, if I kept mistyping something, I just altered the layout to what my fingers were actually pressing
+* navigation/numbers and symbols layers are reachable by holding down thumb keys, with the "core" functionality for each layer on the opposite hand
+* functions/shortcuts layer should be used with one-shot tap on left thumb key
 
 ---
 
@@ -42,7 +37,7 @@ tldr; a modified dvorak layout with `U`/`I` swapped and `C`/`L`/`Z` rotated
 
 ---
 
-## navnum layer
+## navigation/numbers layer
 
 ![crkbz-navnum](tsoim-crkbz-20211030-navnum.png)
 
@@ -62,7 +57,7 @@ tldr; access via hold on right thumb key for numpad and arrows
 
 ---
 
-## symbol layer
+## symbols layer
 
 ![crkbz-symbol](tsoim-crkbz-20211030-symbol.png)
 
@@ -71,7 +66,7 @@ tldr; access via hold on left thumb key for any symbol not accessible on base la
 ### shift-num symbols
 
 * symbols normally accessible by pressing shift + number are placed in corresponding spots of numpad layer
-* may not be most ergonomic but less brain gymnastics
+* may not be most ergonomic but less mental gymnastics
 * arithmetic symbols are also placed in same spots as in navnum layer
 
 ### other symbols
@@ -82,7 +77,7 @@ tldr; access via hold on left thumb key for any symbol not accessible on base la
 
 ---
 
-## function layer
+## functions/shortcuts layer
 
 ![crkbz-function](tsoim-crkbz-20211030-functn.png)
 
@@ -96,7 +91,7 @@ tldr; access via one-shot tap on left thumb key for shortcuts and function keys
     (mainly `-` for command line flags), the `hold-preferred` flavor was selected for `behavior-hold-tap`
 
 * top row: desktop navigation - desktop switching + mission control
-* home row: editing - undo, cut, copy, paste, paste and match destination format
+* home row: editing - undo, cut, copy, paste, and paste and match destination format
 * bottom row: text formatting + screenshotting
 
 ### layer toggle on
@@ -104,10 +99,17 @@ tldr; access via one-shot tap on left thumb key for shortcuts and function keys
 * right thumb keys are used to turn on base, navnum, or symbol layers
     * these keys don't have a corresponding function in symbol layer, see `hold-preferred` comment above
 * function layer needs to be turned on in symbols layer
-    * `TO` doesn't seem to take effect when selected via sticky layer
-        * my guess is the sticky layer is just released after term expires
+    * `TO` doesn't seem to take effect when selected via sticky layer.
+        my guess is the sticky layer is just released after term expires
 
 ### misc
 
-* the zmk bluetooth keys to cycle to prev or next connection, or to clear a connection were included
-* I personally don't really use function keys so I left them on this layer
+* zmk bluetooth keys to cycle to prev or next connection, or to clear a connection
+* personally don't really use function keys so left them on this layer in a numpad-ish fashion
+
+---
+
+## some thoughts
+
+* at some point an internet stranger said that the layout should adapt to the person, not vise versa
+* so as I tested new layouts, if I kept mistyping something, I just altered the layout to what my fingers were actually pressing
