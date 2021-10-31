@@ -46,3 +46,15 @@ Your keyboard is now ready to use.
 git fetch upstream
 git rebase upstream/master
 ```
+
+# Debugging
+
+## Flashing Firmware
+
+* try a USB-B to USB-C cable if device not showing up
+* double click reset button to set to DFU
+
+## Pairing Bluetooth
+
+* if device shows as connected but no keystrokes are sent,
+    try clearing the bluetooth connection on both keyboard and host device
