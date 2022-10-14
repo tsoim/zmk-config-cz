@@ -49,12 +49,12 @@
                 navnum_layer {
                         label = "NAVNUM";
 // -----------------------------------------------------------------------------------------
-// |     | --- |  7  |  8  |  9  | --- |   | VLU | VLD | BRD | BRU | --- | --- |
+// |     | --- |  7  |  8  |  9  | VLM |   | VLU | VLD | BRD | BRU | --- | --- |
 // |     | --- |  4  |  5  |  6  |  0  |   | LFT | DWN |  UP | RGT | --- |     |
 // |     | --- |  1  |  2  |  3  |  x  |   |  =  |  *  |  -  |  +  |  /  | --- |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans   &none   &kp N7  &kp N8  &kp N9  &none       &kp C_VOL_UP    &kp C_VOL_DN    &kp C_BRI_DN    &kp C_BRI_UP    &none       &none
+   &trans   &none   &kp N7  &kp N8  &kp N9  &kp C_MUTE  &kp C_VOL_UP    &kp C_VOL_DN    &kp C_BRI_DN    &kp C_BRI_UP    &none       &none
    &trans   &none   &kp N4  &kp N5  &kp N6  &kp N0      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none       &trans
    &trans   &none   &kp N1  &kp N2  &kp N3  &kp X       &kp EQUAL       &kp ASTRK       &kp MINUS       &kp PLUS        &kp FSLH    &none
                             &trans  &trans  &trans      &trans          &trans          &trans
@@ -66,12 +66,12 @@
 // -----------------------------------------------------------------------------------------
 // |     | --- |  &  |  *  |  <  |  >  |   |  ~  |  _  |  [  |  ]  | --- | --- |
 // |     | --- |  $  |  %  |  ^  |  '  |   |  "  |  {  |  (  |  )  |  }  |     |
-// |     | --- |  !  |  @  |  #  |  `  |   |  =  |  *  |  -  |  +  |  /  | TO3 |
+// |     | --- |  !  |  @  |  #  |  `  |   |  =  |  *  |  -  |  +  |  /  |     |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
    &trans   &none   &kp AMPS    &kp ASTRK   &kp LT      &kp GT      &kp TILDE   &kp UNDER   &kp LBKT    &kp RBKT    &none       &none
    &trans   &none   &kp DLLR    &kp PRCNT   &kp CARET   &kp SQT     &kp DQT     &kp LBRC    &kp LPAR    &kp RPAR    &kp RBRC    &trans
-   &trans   &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &to _FUNCTN
+   &trans   &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &trans
                                 &trans      &trans      &trans      &trans      &trans      &trans
                         >;
                 };
@@ -79,15 +79,15 @@
                 functn_layer {
                         label = "FUNCTN";
 // -----------------------------------------------------------------------------------------
-// |     | --- | ctl<| ctl^| ctl>| VLM |   | BTP | F7  | F8  | F9  | F10 | --- |
-// |     | cmdz| cmdx| cmdc| cmdv|cmdv*|   | BTN | F4  | F5  | F6  | F11 |     |
-// | CLK |cmds4| cmdb| cmdi| cmdu|cmds5|   | BTC | F1  | F2  | F3  | F12 | --- |
-//                   |     |     |     |   | TO0 | TO1 | TO2 |
+// |     |cmds5| ctl<| ctl^| ctl>|cmds4|   | --- | F7  | F8  | F9  | F10 | BTP |
+// |     | cmdz| cmdx| cmdc| cmdv|cmdv*|   | --- | F4  | F5  | F6  | F11 | BTN |
+// | CLK | --- | cmdb| cmdi| cmdu| --- |   | --- | F1  | F2  | F3  | F12 | BTC |
+//                   |     |     | TO3 |   | TO0 | TO1 | TO2 |
                         bindings = <
-   &trans   &none           &kp LC(LEFT)    &kp LC(UP)  &kp LC(RIGHT)   &kp C_MUTE          &bt BT_PRV  &kp F7  &kp F8  &kp F9  &kp F10     &none
-   &trans   &kp LG(Z)       &kp LG(X)       &kp LG(C)   &kp LG(V)       &kp LG(LA(LS(V)))   &bt BT_NXT  &kp F4  &kp F5  &kp F6  &kp F11     &trans
-   &kp CAPS &kp LG(LS(N4))  &kp LG(B)       &kp LG(I)   &kp LG(U)       &kp LG(LS(N5))      &bt BT_CLR  &kp F1  &kp F2  &kp F3  &kp F12     &none
-                                            &trans      &trans          &trans              &to _DVORAK &to _NAVNUM &to _SYMBOL
+   &trans   &kp LG(LS(N5))  &kp LC(LEFT)    &kp LC(UP)  &kp LC(RIGHT)   &kp LG(LS(N4))      &none   &kp F7  &kp F8  &kp F9  &kp F10 &bt BT_PRV
+   &trans   &kp LG(Z)       &kp LG(X)       &kp LG(C)   &kp LG(V)       &kp LG(LA(LS(V)))   &none   &kp F4  &kp F5  &kp F6  &kp F11 &bt BT_NXT
+   &kp CAPS &none           &kp LG(B)       &kp LG(I)   &kp LG(U)       &none               &none   &kp F1  &kp F2  &kp F3  &kp F12 &bt BT_CLR
+                                            &trans      &trans          &to _FUNCTN         &to _DVORAK &to _NAVNUM &to _SYMBOL
                         >;
                 };
         };
