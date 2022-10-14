@@ -1,6 +1,6 @@
 # ZMK config for Corne-ish Zen keyboard
 
-![crkbz-main](docs/tsoim-crkbz-20211030.png)
+![crkbz-main](docs/tsoim-crkbz-20221013.png)
 
 Read the [keyboard tour](docs/tour.md) to learn more!
 
