@@ -16,6 +16,12 @@
 #define _FUNCTN 3
 
 / {
+    chosen {
+        zmk,matrix_transform = &default_transform;
+    };
+};
+
+/ {
         behaviors {
             mosl: momentary_sticky_holdtap {
                 compatible = "zmk,behavior-hold-tap";
