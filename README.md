@@ -6,13 +6,13 @@ Read the [keyboard tour](docs/tour.md) to learn more!
 
 ## repo setup
 
-* [official Corne-ish Zen repo](https://github.com/LOWPROKB/zmk-config-Corne-ish-Zen)
+* [official Corne-ish Zen repo](https://github.com/LOWPROKB/zmk-config-zen-2)
 * this repo was set up as a private fork following [these instructions](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274)
 * to update:
 
 ```
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 ```
 
 ## building firmware
