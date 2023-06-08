@@ -71,14 +71,14 @@
                 symbol_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |     | --- |  &  |  *  |  <  |  >  |   |  ~  |  _  |  [  |  ]  | --- | --- |
-// |     | --- |  $  |  %  |  ^  |  '  |   |  "  |  {  |  (  |  )  |  }  |     |
+// | TG3 | --- |  &  |  *  |  <  |  >  |   |  ~  |  _  |  [  |  ]  | --- | --- |
+// | TG4 | --- |  $  |  %  |  ^  |  '  |   |  "  |  {  |  (  |  )  |  }  |     |
 // |     | --- |  !  |  @  |  #  |  `  |   |  =  |  *  |  -  |  +  |  /  |     |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans   &none   &kp AMPS    &kp ASTRK   &kp LT      &kp GT      &kp TILDE   &kp UNDER   &kp LBKT    &kp RBKT    &none       &none
-   &trans   &none   &kp DLLR    &kp PRCNT   &kp CARET   &kp SQT     &kp DQT     &kp LBRC    &kp LPAR    &kp RPAR    &kp RBRC    &trans
-   &trans   &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &trans
+   &to _FUNCTN  &none   &kp AMPS    &kp ASTRK   &kp LT      &kp GT      &kp TILDE   &kp UNDER   &kp LBKT    &kp RBKT    &none       &none
+   &to _BLUETH  &none   &kp DLLR    &kp PRCNT   &kp CARET   &kp SQT     &kp DQT     &kp LBRC    &kp LPAR    &kp RPAR    &kp RBRC    &trans
+   &trans       &none   &kp EXCL    &kp AT      &kp POUND   &kp GRAVE   &kp EQUAL   &kp ASTRK   &kp MINUS   &kp PLUS    &kp FSLH    &trans
                                 &trans      &trans      &trans      &trans      &trans      &trans
                         >;
                 };
@@ -89,12 +89,12 @@
 // |     |cmds5| ctl<| ctl^| ctl>|cmds4|   | --- | F7  | F8  | F9  | F10 | BTP |
 // |     | cmdz| cmdx| cmdc| cmdv|cmdv*|   | --- | F4  | F5  | F6  | F11 | BTN |
 // | CLK | SL4 | cmdb| cmdi| cmdu| --- |   | --- | F1  | F2  | F3  | F12 | BTC |
-//                   |     |     | TG3 |   | TO0 | TO1 | TO2 |
+//                   |     |     | --- |   | TO0 | TO1 | TO2 |
                         bindings = <
    &trans   &kp LG(LS(N5))  &kp LC(LEFT)    &kp LC(UP)      &kp LC(RIGHT)   &kp LG(LS(N4))      &none   &kp F7  &kp F8  &kp F9  &kp F10 &bt BT_PRV
    &trans   &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LG(LA(LS(V)))   &none   &kp F4  &kp F5  &kp F6  &kp F11 &bt BT_NXT
    &kp CAPS &sl _BLUETH     &kp LG(B)       &kp LG(I)       &kp LG(U)       &none               &none   &kp F1  &kp F2  &kp F3  &kp F12 &bt BT_CLR
-                                            &trans          &trans          &tog _FUNCTN        &to _DVORAK &to _NAVNUM &to _SYMBOL
+                                            &trans          &trans          &trans              &to _DVORAK &to _NAVNUM &to _SYMBOL
                         >;
                 };
 
@@ -103,13 +103,13 @@
 // -----------------------------------------------------------------------------------------
 // |     | --- | --- | --- | --- | BTP |   | --- | --- | --- | --- | --- | --- |
 // |     | --- | BT3 | BT4 | --- | BTN |   | --- | --- | --- | --- | --- | --- |
-// |     | TG4 | BT0 | BT1 | BT2 | BTC |   | --- | --- | --- | --- | --- | --- |
+// |     | --- | BT0 | BT1 | BT2 | BTC |   | --- | --- | --- | --- | --- | --- |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans   &none           &none           &none           &none           &bt BT_PRV  &none   &none   &none   &none   &none   &none
-   &trans   &none           &bt BT_SEL 3    &bt BT_SEL 4    &none           &bt BT_NXT  &none   &none   &none   &none   &none   &none
-   &trans   &tog _BLUETH    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR  &none   &none   &none   &none   &none   &none
-                                        &trans          &trans          &trans      &trans  &trans  &trans
+   &trans   &none   &none           &none           &none           &bt BT_PRV  &none   &none   &none   &none   &none   &none
+   &trans   &none   &bt BT_SEL 3    &bt BT_SEL 4    &none           &bt BT_NXT  &none   &none   &none   &none   &none   &none
+   &trans   &none   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_CLR  &none   &none   &none   &none   &none   &none
+                                    &trans          &trans          &trans      &trans  &trans  &trans
                         >;
                 };
         };
