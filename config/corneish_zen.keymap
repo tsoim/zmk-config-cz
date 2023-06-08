@@ -14,6 +14,7 @@
 #define _NAVNUM 1
 #define _SYMBOL 2
 #define _FUNCTN 3
+#define _BLUETH 4
 
 / {
     chosen {
@@ -43,7 +44,7 @@
 // | TAB |  /  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  L  |  R  |  Z  | \   |
 // | ESC |  A  |  O  |  E  |  I  |  U  |   |  D  |  H  |  T  |  N  |  S  | RET |
 // | SHF |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  C  | SHF |
-//                   | GUI | MSL | BSP |   | CTL | SPC | ALT |
+//                   | GUI | MSL3| BSP |   | CTL | SPC | ALT |
                         bindings = <
     &kp TAB     &kp FSLH    &kp COMMA   &kp DOT     &kp P   &kp Y       &kp F   &kp G   &kp L   &kp R   &kp Z   &kp BSLH
     &kp ESC     &kp A       &kp O       &kp E       &kp I   &kp U       &kp D   &kp H   &kp T   &kp N   &kp S   &kp RET
@@ -87,13 +88,28 @@
 // -----------------------------------------------------------------------------------------
 // |     |cmds5| ctl<| ctl^| ctl>|cmds4|   | --- | F7  | F8  | F9  | F10 | BTP |
 // |     | cmdz| cmdx| cmdc| cmdv|cmdv*|   | --- | F4  | F5  | F6  | F11 | BTN |
-// | CLK | --- | cmdb| cmdi| cmdu| --- |   | --- | F1  | F2  | F3  | F12 | BTC |
+// | CLK | SL4 | cmdb| cmdi| cmdu| --- |   | --- | F1  | F2  | F3  | F12 | BTC |
 //                   |     |     | TO3 |   | TO0 | TO1 | TO2 |
                         bindings = <
-   &trans   &kp LG(LS(N5))  &kp LC(LEFT)    &kp LC(UP)  &kp LC(RIGHT)   &kp LG(LS(N4))      &none   &kp F7  &kp F8  &kp F9  &kp F10 &bt BT_PRV
-   &trans   &kp LG(Z)       &kp LG(X)       &kp LG(C)   &kp LG(V)       &kp LG(LA(LS(V)))   &none   &kp F4  &kp F5  &kp F6  &kp F11 &bt BT_NXT
-   &kp CAPS &none           &kp LG(B)       &kp LG(I)   &kp LG(U)       &none               &none   &kp F1  &kp F2  &kp F3  &kp F12 &bt BT_CLR
-                                            &trans      &trans          &to _FUNCTN         &to _DVORAK &to _NAVNUM &to _SYMBOL
+   &trans   &kp LG(LS(N5))  &kp LC(LEFT)    &kp LC(UP)      &kp LC(RIGHT)   &kp LG(LS(N4))      &none   &kp F7  &kp F8  &kp F9  &kp F10 &bt BT_PRV
+   &trans   &kp LG(Z)       &kp LG(X)       &kp LG(C)       &kp LG(V)       &kp LG(LA(LS(V)))   &none   &kp F4  &kp F5  &kp F6  &kp F11 &bt BT_NXT
+   &kp CAPS &sl _BLUETH     &kp LG(B)       &kp LG(I)       &kp LG(U)       &none               &none   &kp F1  &kp F2  &kp F3  &kp F12 &bt BT_CLR
+                                            &trans          &trans          &to _FUNCTN         &to _DVORAK &to _NAVNUM &to _SYMBOL
+                        >;
+                };
+
+                functn_layer {
+                        label = "BLUETH";
+// -----------------------------------------------------------------------------------------
+// |     | --- | --- | --- | --- | BTP |   | --- | --- | --- | --- | --- | --- |
+// |     | --- | BT4 | BT5 | --- | BTN |   | --- | --- | --- | --- | --- | --- |
+// |     | TO4 | BT1 | BT2 | BT3 | BTC |   | --- | --- | --- | --- | --- | --- |
+//                   |     |     |     |   |     |     |     |
+                        bindings = <
+   &trans   &none       &none           &none           &none           &bt BT_PRV  &none   &none   &none   &none   &none   &none
+   &trans   &none       &bt BT_SEL 4    &bt BT_SEL 5    &none           &bt BT_NXT  &none   &none   &none   &none   &none   &none
+   &trans   &to _BLUETH &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_CLR  &none   &none   &none   &none   &none   &none
+                                        &trans          &trans          &trans      &trans  &trans  &trans
                         >;
                 };
         };
