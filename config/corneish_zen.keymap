@@ -57,14 +57,14 @@
                         label = "NAVNUM";
 // -----------------------------------------------------------------------------------------
 // |     | --- |  7  |  8  |  9  | VLM |   | VLU | VLD | BRD | BRU | --- | --- |
-// |     | --- |  4  |  5  |  6  |  0  |   | LFT | DWN |  UP | RGT | --- |     |
-// |     | --- |  1  |  2  |  3  |  x  |   |  =  |  *  |  -  |  +  |  /  | --- |
+// |     | ALT |  4  |  5  |  6  |  0  |   | LFT | DWN |  UP | RGT | --- |     |
+// |     | CTL |  1  |  2  |  3  |  x  |   |  =  |  *  |  -  |  +  |  /  |     |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans   &none   &kp N7  &kp N8  &kp N9  &kp C_MUTE  &kp C_VOL_UP    &kp C_VOL_DN    &kp C_BRI_DN    &kp C_BRI_UP    &none       &none
-   &trans   &none   &kp N4  &kp N5  &kp N6  &kp N0      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none       &trans
-   &trans   &none   &kp N1  &kp N2  &kp N3  &kp X       &kp EQUAL       &kp ASTRK       &kp MINUS       &kp PLUS        &kp FSLH    &none
-                            &trans  &trans  &trans      &trans          &trans          &trans
+   &trans   &none       &kp N7  &kp N8  &kp N9  &kp C_MUTE  &kp C_VOL_UP    &kp C_VOL_DN    &kp C_BRI_DN    &kp C_BRI_UP    &none       &none
+   &trans   &kp LALT    &kp N4  &kp N5  &kp N6  &kp N0      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none       &trans
+   &trans   &kp LCTL    &kp N1  &kp N2  &kp N3  &kp X       &kp EQUAL       &kp ASTRK       &kp MINUS       &kp PLUS        &kp FSLH    &trans
+                                &trans  &trans  &trans      &trans          &trans          &trans
                         >;
                 };
 
